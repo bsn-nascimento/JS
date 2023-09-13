@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: rgb(255, 146, 248);
+            color: aliceblue;
+            font-family: cursive;
+            text-align: center;
+        }
+        section{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 250px;
+            background-color: aliceblue;
+            color: rgb(255, 146, 248);
+            border-radius: 10px;
+        }
+        h1{
+            font-size: 100px;
+        }
+        button{
+            color: rgb(255, 2, 238);
+            border-color: rgb(255, 0, 238) ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Java Script</h1>
+    <img src="pink2.png" alt="pink2">
+    <button onclick="inicio()">Clique aqui</button>
+    <section id="resultado">
+        <p>O resultado irá aparecer aqui.</p>
+    </section>
+    <script>
+        function inicio(){
+            let nome = window.prompt('Informe seu nome completo')
+            let res =window.document.getElementById('resultado')
+            res.innerHTML=`<p> Olá, ${nome}! Agora sei colocar mensagens no corpo do meu site!!`
+        }
+    </script>
+</body>
+</html>

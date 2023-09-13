@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+         body{
+            background-color: rgb(255, 146, 248);
+            color: aliceblue;
+            font-family: cursive;
+            
+        }
+        h1{
+            font-size: 50px;
+        }
+        p{
+            font-size: 25px;
+        }
+        button{
+            color: rgb(255, 2, 238);
+            border-color: rgb(255, 0, 238) ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando desconto</h1>
+    <button onclick="inicio()">Clique aqui para começar</button>
+    <section id="resultado">
+
+    </section>
+        <script>
+            function inicio() {
+                let nome = window.prompt("Informe o nome do produto:")
+                let preco = window.prompt("Informe o preço do produto:")
+                let desconto = window.prompt("Informe o valor do desconto:")
+                let valorfinal = preco-(preco*desconto)/100
+                let res =document.getElementById('resultado')
+
+                res.innerHTML = `<p> O preço de ${nome} é R$${preco}. Com um desconto de ${desconto}% ficará em R$${valorfinal}.`
+            }
+        </script>
+</body>
+</html>
